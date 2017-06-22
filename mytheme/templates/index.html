@@ -8,13 +8,13 @@
 
 <div class="container marketing">
   <!-- START THE FEATURETTES -->
-  <hr class="featurette-divider">
   
-  <div class="row featurette">
+  <div class="row featurette" style=" margin-top: 1cm;">
     <div class="col-md-9 col-md-push-3">
-      <h2 class="featurette-heading">Welcome <span class="text-muted">to my blog.</span><br>제 블로그에 <span class="text-muted">오신 것을 환영합니다.</span></h2>
-      <p class="lead">Hello, I am Wonjin. This blog is for updating my specialties and interests. Maybe I will update my IT skills and daily lives evetns. Thanks for your visiting!
-		             <br>김원진입니다. 저의 IT 스킬이나 제가 평상시 생활하면서 관심 갖는 많은 것을 업데이트하는 개인 블로그로입니다. 방문해 주셔서 감사합니다!</p>
+      <h2 class="featurette-heading">Welcome <span class="text-muted">to my blog.</span></h2>
+      <p class="lead">Hello, I am Wonjin. This blog is for updating my specialties and interests. I will update my IT skills and daily lives evetns. Thanks for your visiting!</p>
+	  <h2 class="featurette-heading">제 블로그에 <span class="text-muted">오신 것을 환영합니다.</span></h2>
+      <p class="lead">저의 IT 스킬이나 제가 평상시 생활하면서 관심 갖는 많은 것을 업데이트하는 개인 블로그입니다. 방문해 주셔서 감사합니다!</p>
     </div>
     <div class="col-md-3 col-md-pull-9">
       <!--
@@ -33,23 +33,34 @@
   <div class="row">
 	{% blog_recent_posts 8 as recent_posts %}
 	{% for blog_post in recent_posts %}
-    <div class="col-lg-4">
-	  {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
-      <img class="img-thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-	  {% endif %} 
-	  
-	  {% editable blog_post.title %}
-      <h2><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a></h2>
-	  {% endeditable %}
-	  
-	  {% editable blog_post.content %}
-	  <p>{{ blog_post.description_from_content|safe }}</p>
-	  {% endeditable %}
+    <div class="col-lg-3">
+	  <div class="myhome-blogposts">
+      {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
+	  <a href="{{ blog_post.get_absolute_url }}">
+      <img class="img-thumbnail .img-responsive" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}" alt="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="100%" height="100%">
+	  </a>
+	  {% endif %}
 
-      <p><a class="btn btn-default" href="{{ blog_post.get_absolute_url }}" role="button">Read more &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-
+      <div class="myhome-inner">
+        <div class="myhome-desc">
+        {% editable blog_post.title %}
+        <h4 style="text-align: center"><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a></h4>
+        {% endeditable %}
+	  
+	    {% editable blog_post.content %}
+        <p>{{ blog_post.description_from_content|safe }}</p>
+	    {% endeditable %}
+        </div><!-- /.myhome-desc -->
+      
+	  <!--
+      <p style="text-align: center"><a class="btn btn-default" href="{{ blog_post.get_absolute_url }}" role="button">Read more &raquo;</a></p>
+	  -->
+      <p style="text-align: center"><a href="{{ blog_post.get_absolute_url }}">Read more &raquo;</a></p>
+	  </div><!-- /.myhome-ineer -->
+      </div><!-- /.myhome-blogposts -->
+    </div><!-- /.col-lg-3 -->
 	{% endfor %}
+	
   </div><!-- /.row -->
 </div><!-- continer -->
 
