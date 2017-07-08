@@ -26,7 +26,7 @@ h6 {
   color: #778492;
 }
 a {
-  color: #3aaa64;
+  #color: #3aaa64;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -34,8 +34,8 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  color: #5f6b77;
-  color: #2d844e;
+  #color: #5f6b77;
+  #color: #2d844e;
 }
 .btn,
 a.btn {
@@ -529,11 +529,14 @@ iframe {
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 /* Ex-Large devices (large desktops, 1200px and up) */
+/*
 @media (min-width: 1400px) {
   .container {
     width: 1360px;
   }
+
 }
+*/
 
 
 /* FROM CAROUSEL */
@@ -554,10 +557,12 @@ iframe {
   padding-right: 0;
   padding-left: 0;
 }
+/*
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
 }
+*/
 .navbar-wrapper .navbar .container {
   width: auto;
 }
@@ -683,6 +688,14 @@ iframe {
 
 .instagramicon:hover {
   color: #cd486b;
+}
+
+.linkedinicon {
+  color: #00a0dc;
+}
+
+.linkedinicon:hover {
+  color: #008cc9;
 }
 
 .githubicon {

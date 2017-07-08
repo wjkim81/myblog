@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="{% static "css/bootstrap-rtl.css" %}">
   {% endif %}
   <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
-  {% ifinstalled cartridge.shop %}A
+  {% ifinstalled cartridge.shop %}
   <link rel="stylesheet" href="{% static "css/cartridge.css" %}">
   {% if LANGUAGE_BIDI %}
   <link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
@@ -47,6 +47,11 @@
 
   {% compress js %}
   <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
+  {% comment %}
+  <script src="{% static "js/jquery-1.11.1.min.js" %}"></script>
+  <script src="{% static "js/jquery-migrate-1.2.1.min.js" %}"></script>
+  <script src="{% static "js/jquery-rss/dist/jquery.rss.min.js" %}"></script>
+  {% endcomment %}
   <script src="{% static "js/bootstrap.js" %}"></script>
   <script src="{% static "js/bootstrap-extras.js" %}"></script>
   {% block extra_js %}{% endblock %}
@@ -55,7 +60,7 @@
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
   <script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
   <!-- custom js -->
-  <script type="text/javascript" src="js/myjs.js"></script>  
+  <script type="text/javascript" src="{% static "js/myjs.js" %}"></script>  
 
   {% endcompress %}
 
