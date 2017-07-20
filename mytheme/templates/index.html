@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n staticfiles mezzanine_tags blog_tags %}
+{% load i18n staticfiles mezzanine_tags blog_tags mytags %}
 
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
@@ -13,7 +13,7 @@
     <img class="profile-image img-responsive pull-left" src="{{ MEDIA_URL }}uploads/myblog/mainpic_300x300.jpg" alt="Generic placeholder image" />
     <div class="profile-content pull-left">
       <h1 class="name">Kim Wonjin</h1>
-      <h2 class="desc">Entrepreneur and Software Engineer</h2>
+      <h2 class="desc">Entrepreneur and Data Scienctist</h2>
       <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Seoul, South Korea</li>
 	  <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span>onejean81[at]gmail[dot]com</li>
 	  <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="http://www.wjkim.com">http://www.wjkim.com</a></li>
@@ -25,7 +25,7 @@
         <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
         <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 		{% endcomment %}
-        <li><a href="#" target="_blank"><i class="fa fa-linkedin linkedinicon"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/wonjin-kim-2b15a25a/" target="_blank"><i class="fa fa-linkedin linkedinicon"></i></a></li>
         <li><a href="https://github.com/wjkim81" target="_blank"><i class="fa fa-github-alt githubicon"></i></a></li>
 		
         <!--
@@ -46,193 +46,119 @@
         <div class="section-inner">
           <h2 class="heading">About Me</h2>
           <div class="content">
-            <p>I received my B.S. in Electrical Engineering from Korea Advanced Institute of Science and Technology (KAIST) in 2008 and my master degree with Computer Vision and Machine Learning specialization from KAIST in 2011 under the supervision of Prof. Inso Kweon.</p> 
-			<p>I worked in IBM as a software engineer in analytics unit and helped various Korean companies to adopt IBM solutions in their business from 2012 to 2016.I worked in startup company <a href="http://vntc.me" target="_blank">VNTC</a> as a technical leader from 2016 to 2017, which developed personalized spinal correction device for scoliosis patients with 3D printer technology.</p>
-			<p>I am currently a Data Science and entrepreneur to prepare new business to adopt blockchain technology in distributions industries.</p>
+            <p>I received my B.S. in Electrical Engineering from Korea Advanced Institute of Science and Technology (KAIST) in 2008 and my master degree with Computer Vision and Machine Learning specialization from KAIST in 2011 under the supervision of <a href="http://rcv.kaist.ac.kr/" target="_blank">Prof. Inso Kweon.</a></p> 
+			<p>I worked in IBM as a software engineer in analytics unit and helped various Korean companies to adopt IBM solutions in their business from 2012 to 2016. I worked in startup company <a href="http://vntc.me" target="_blank">VNTC</a> as a technical leader from 2016 to 2017, which developed personalized spinal correction device for scoliosis patients with 3D printer technology.</p>
+			<p>I am currently a data scienctist and entrepreneur to prepare new business to adopt blockchain technology in distributions industries.</p>
                          
           </div><!--//content-->
         </div><!--//section-inner-->                 
       </section><!--//section-->
-    
-
-    </div><!--//primary-->
-    <div class="secondary col-md-4 col-sm-12 col-xs-12">
-      {% comment %}
-      <aside class="info aside section">
+      <section class="projects section">
         <div class="section-inner">
-	      <h2 class="heading sr-only">Basic Information</h2>
-	      <div class="content">
-		    <ul class="list-unstyled">
-		      <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Seoul, South Korea</li>
-		      <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="#">onejean81[at]gmail[dot]com</a></li>
-              <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="#">http://www.wjkim.com</a></li>
-		    </ul>
-	      </div><!--//content-->  
-        </div><!--//section-inner-->                 
-      </aside><!--//aside-->
-                
-      <aside class="skills aside section">
-        <div class="section-inner">
-	      <h2 class="heading">Skills</h2>
-	      <div class="content">
-		    <p class="intro">Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Coderwall profile so people can get more info there.</p>
-                            
-            <div class="skillset">
-                               
-			  <div class="item">
-			    <h3 class="level-title">Python &amp; Django<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
-				<div class="level-bar">
-				  <div class="level-bar-inner" data-level="96%">
-				  </div>                                      
-                </div><!--//level-bar-->                                 
-              </div><!--//item-->
-                                
-              <div class="item">
-              <h3 class="level-title">Javascript &amp; jQuery<span class="level-label">Expert</span></h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="96%">
-                  </div>                                      
-                </div><!--//level-bar-->                                 
-              </div><!--//item-->
-                                
-              <div class="item">
-                <h3 class="level-title">HTML5, CSS3, SASS &amp; LESS<span class="level-label">Expert</span></h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="96%">
-                  </div>                                      
-                </div><!--//level-bar-->                                 
-              </div><!--//item-->
-                                
-              <div class="item">
-                <h3 class="level-title">Ruby on Rails<span class="level-label">Pro</span></h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="85%">
-                  </div>                                      
-                </div><!--//level-bar-->                                 
-              </div><!--//item-->
-                                
-              <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p> 
-            </div>              
-		  </div><!--//content-->  
-	    </div><!--//section-inner-->                 
-      </aside><!--//section-->
-               
-      <aside class="testimonials aside section">
-	    <div class="section-inner">
-		  <h2 class="heading">Testimonials</h2>
-		  <div class="content">
+          <h2 class="heading">Research Interests</h2>
+          <div class="content">
             <div class="item">
-              <blockquote class="quote">                                  
-                <p><i class="fa fa-quote-left"></i>James is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!</p>
-              </blockquote>                
-              <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p>                                                             
+			  <p class="summary">I designed, developed, and evaluated methods and applications to support various users and customers in multiple domains. My recent research has focused on the following three areas:</p>
+              <h3 class="title">Machine Learning: make predictive model and help decision-making based on the data</h3>
+              <p class="summary">I consulted and supported various customer's project with data analysis technique to give them business insights.</p>
             </div><!--//item-->
-                            
-			<p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Linkedin</a></p> 
-                            
-		  </div><!--//content-->
-	    </div><!--//section-inner-->
-      </aside><!--//section-->
-                
-      <aside class="education aside section">
-	    <div class="section-inner">
-		  <h2 class="heading">Education</h2>
-		  <div class="content">
-            <div class="item">                      
-              <h3 class="title"><i class="fa fa-graduation-cap"></i> MSc Psychology and Computer Science</h3>
-              <h4 class="university">University College London <span class="year">(2011-2012)</span></h4>
-			</div><!--//item-->
-			<div class="item">
-              <h3 class="title"><i class="fa fa-graduation-cap"></i> BSc Computer Science</h3>
-              <h4 class="university">University of Bristol <span class="year">(2008-2011)</span></h4>
-			</div><!--//item-->
-		  </div><!--//content-->
-	    </div><!--//section-inner-->
-      </aside><!--//section-->
-                            
-      <aside class="languages aside section">
-	    <div class="section-inner">
-		  <h2 class="heading">Languages</h2>
-		    <div class="content">
-			  <ul class="list-unstyled">
-                <li class="item">
-                  <span class="title"><strong>English:</strong></span>
-                  <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
-                </li><!--//item-->
-                <li class="item">
-                  <span class="title"><strong>Spanish:</strong></span>
-                  <span class="level">Professional Proficiency <br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i></span>
-				</li><!--//item-->
-			  </ul>
-		    </div><!--//content-->
-	      </div><!--//section-inner-->
-      </aside><!--//section-->
-      {% endcomment %}
-      <aside class="blog aside section">
-	    <div class="section-inner">
-		  <h2 class="heading">Latest Blog Posts</h2>
-		  <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery RSS plugin</a> to pull in your blog post feeds.</p>
-		  <div id="rss-feeds" class="content">
 
-		  </div><!--//content-->
-	    </div><!--//section-inner-->
-      </aside><!--//section-->
+            <div class="item">
+              <h3 class="title">Computer Vision: develop face and object recognition</h3>
+              <p class="summary">I have experiences with 3D reconstruction, image processing, and photometrics. Mostly, I am focusing on machine learning and deep learning in computer vision for recognition rand perception esearch topics.</p>
+            </div><!--//item-->
 
-      {% comment %}  
-      <aside class="list music aside section">
-	    <div class="section-inner">
-		  <h2 class="heading">Favourite coding music</h2>
-		  <div class="content">
-	        <ul class="list-unstyled">
-			  <li><i class="fa fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-			  <li><i class="fa fa-headphones"></i> <a href="#">Ut sollicitudin in mauris non auctor</a></li>
-			  <li><i class="fa fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-			  <li><i class="fa fa-headphones"></i> <a href="#">Duis et felis bibendum</a></li>
-			</ul>
-		  </div><!--//content-->
-	    </div><!--//section-inner-->
-      </aside><!--//section-->
-                
-      <aside class="list conferences aside section">
-        <div class="section-inner">
-		  <h2 class="heading">Conferences</h2>
-		  <div class="content">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-calendar"></i> <a href="https://developer.apple.com/wwdc/" target="_blank">WWDC 2014</a> (San Francisco)</li>
-              <li><i class="fa fa-calendar"></i> <a href="http://hive.aigaseattle.org/">Hive</a> (Seattle)</li>
+            <div class="item">
+                      <h3 class="title">Data Science: give clear insight from various interdisciplinary fields</h3>
+                      <p class="summary">I am conducting reasearch on economics with extensive collected data, which requires interdisciplinary knowledge to give insights based on empirical data set.</p>
+                    </div><!--//item-->
+
+              </div><!--//content-->
+        </div><!--//section-inner-->
+      </section><!--//section-->
+    </div><!--//primary-->
+	
+    <div class="secondary col-md-4 col-sm-12 col-xs-12">
+      <aside id="search-2" class="widget widget_search">
+		<form method="get" class="form-search" action="https://colorlib.com/dazzling/">
+	  	  <div class="form-group">
+            <div class="input-group">
+	  	      <span class="screen-reader-text">Search for:</span>
+	  	      <input type="text" class="form-control search-query" placeholder="Search..." value="" name="s">
+	  	      <span class="input-group-btn">
+              <button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+	  	      </span>
+	  	    </div>
+	  	  </div>
+	    </form>
+      </aside>
+
+      <div class="widget tabbed">
+	    <div class="tabs-wrapper">
+	      <ul class="nav nav-tabs">
+	        <li class="active"><a href="#popular-posts" data-toggle="tab">Popular</a></li>
+	        <li><a href="#recent" data-toggle="tab">Recent</a></li>
+			{% comment %}
+	        <li><a href="#messages" data-toggle="tab"><i class="fa fa-comments tab-comment"></i></a></li>
+			{% endcomment %}
+	      </ul>
+
+	      <div class="tab-content">
+	        <ul id="popular-posts" class="tab-pane active">
+	  		  {% blog_popular_posts 5 as popular_posts %}
+	  		  {% for blog_post in popular_posts %}
+              <li>
+				{% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
+	            <a href="{{ blog_post.get_absolute_url }}" class="tab-thumb thumbnail" rel="bookmark" title="{{ blog_post.title }}">
+	              <img width="60" height="60" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}" class="attachment-tab-small size-tab-small wp-post-image" alt="" sizes="(max-width: 60px) 100vw, 60px"/>
+			    </a>
+				{% endif %}
+                <div class="content">
+	              <a class="tab-entry" href="{{ blog_post.get_absolute_url }}" rel="bookmark" title="{{ blog_post.title }}">{{ blog_post.title }}</a>
+	              <span>
+				    <i class="fa fa-clock-o"></i><i>{% blocktrans with sometime=blog_post.publish_date|date:" M.j Y" %}{{ sometime }}{% endblocktrans %}</i>
+				  </span>
+				  <span>
+                    <a href="{{ blog_post.get_absolute_url }}#comments"><i class="fa fa-comment-o"></i><i>{% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} {% endblocktrans %}</i></a>
+				  </span>
+	            </div>
+	          </li>
+			  {% endfor %}
+	        </ul>
+            <ul id="recent" class="tab-pane">
+  	  		  {% blog_recent_posts 5 as recent_posts %}
+  	  		  {% for blog_post in recent_posts %}
+              <li>
+              <li>
+				{% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
+	            <a href="{{ blog_post.get_absolute_url }}" class="tab-thumb thumbnail" rel="bookmark" title="{{ blog_post.title }}">
+	              <img width="60" height="60" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}" class="attachment-tab-small size-tab-small wp-post-image" alt="" sizes="(max-width: 60px) 100vw, 60px"/>
+			    </a>
+				{% endif %}
+                <div class="content">
+	              <a class="tab-entry" href="{{ blog_post.get_absolute_url }}" rel="bookmark" title="{{ blog_post.title }}">{{ blog_post.title }}</a>
+	              <span>
+				    <i class="fa fa-clock-o"></i><i>{% blocktrans with sometime=blog_post.publish_date|date:" M.j Y" %}{{ sometime }}{% endblocktrans %}</i>
+				  </span>
+				  <span>
+                    <a href="{{ blog_post.get_absolute_url }}#comments"><i class="fa fa-comment-o"></i>{% blocktrans count comments_count=blog_post.comments_count %}{{ comments_count }} comment{% plural %}{{ comments_count }} {% endblocktrans %}</a>
+				  </span>
+	            </div>
+	          </li>
+              {% endfor %}
+	        </ul>
+			{% comment %}
+            <ul id="messages" class="tab-pane">
+              <li>
+	            <div class="content">AABBAA on<a href="https://colorlib.com/dazzling/about/page-with-comments/" rel="bookmark" title="Page with comments">Page with comments</a>
+                  <p>THIS IS REALLY AWESOME</p>
+                </div>
+              </li>
             </ul>
-		  </div><!--//content-->
-	    </div><!--//section-inner-->
-      </aside><!--//section-->
-                
-      <aside class="credits aside section">
-	    <div class="section-inner">
-		  <h2 class="heading">Credits</h2>
-		  <div class="content">
-		    <ul class="list-unstyled">
-		      <li><a href="http://getbootstrap.com/" target="_blank"><i class="fa fa-external-link"></i> Bootstrap 3.2</a></li>
-			  <li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank"><i class="fa fa-external-link"></i> FontAwsome 4.1</a></li>
-			  <li><a href="http://jquery.com/" target="_blank"><i class="fa fa-external-link"></i> jQuery</a></li>
-			  <li><a href="http://caseyscarborough.com/projects/github-activity/" target="_blank"><i class="fa fa-external-link"></i> GitHub Activity Stream</a></li>
-                                
-			  <li><a href="https://github.com/sdepold/jquery-rss" target="_blank"><i class="fa fa-external-link"></i> jQuery RSS</a></li>
-                                
-			  <li>Profile image: <a href="https://www.flickr.com/photos/dotbenjamin/2577394151" target="_blank">Ben Smith</a></li>
-			  <li>iPad and iPhone mocks: <a href="https://dribbble.com/perlerar" target="_blank">Regy Perlera</a></li>
-                                
-			</ul>
-                            
-			<hr/>
-                            
-			<p>This responsive HTML5 CSS3 site template is handcrafted by UX designer <a href="https://www.linkedin.com/in/xiaoying" target="_blank">Xiaoying Riley</a> at <a href="http://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a> for developers and is <strong>FREE</strong> under the <a class="dotted-link" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 License</a></p>
-            <p>We will improve or add new features to this template based on users' feedback so follow us on twitter to get notified when a new version is out!</p>
-            <a class="btn btn-cta-secondary btn-follow" href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fa fa-twitter"></i> Follow us</a>
-			<a class="btn btn-cta-primary btn-download" href="http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/" target="_blank"><i class="fa fa-download"></i> I want to download</a>
-		  </div><!--//content-->
-	    </div><!--//section-inner-->
-      </aside><!--//section-->
-      {% endcomment %}
-	  
+			{% endcomment %}
+          </div><!--//tab-content-->
+        </div><!--//tabs-wrapper-->
+      </div><!--//widge-->
     </div><!--//secondary-->    
   </div><!--//row-->
 </div><!--//masonry-->
